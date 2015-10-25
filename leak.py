@@ -1,26 +1,5 @@
 import socket
-import re
 import config
-
-def get_word(data):
-    word = None
-    word_regexp = re.compile(r'[^Score:\s\d{1,}]([a-zA-Z0-9]+)')
-    found = word_regexp.search(data)
-    if found:
-        word = found.group(1)
-    else:
-        pass
-    return word
-
-def get_score(data):
-    score = None
-    score_regexp = re.compile(r'Score:\s(\d{1,})')
-    found = score_regexp.search(data)
-    if found:
-        score = int(found.group(1))
-    else:
-        pass
-    return score
 
 def main():
     playing = True
