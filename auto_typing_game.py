@@ -2,6 +2,7 @@ import socket
 import re
 import config
 
+
 def get_word(data):
     word = None
     word_regexp = re.compile(r'[^Score:\s\d{1,}]([a-zA-Z0-9]+)')
@@ -12,6 +13,7 @@ def get_word(data):
         pass
     return word
 
+
 def get_score(data):
     score = None
     score_regexp = re.compile(r'Score:\s(\d{1,})')
@@ -21,6 +23,7 @@ def get_score(data):
     else:
         pass
     return score
+
 
 def main():
     playing = True
